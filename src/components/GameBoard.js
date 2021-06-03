@@ -12,9 +12,11 @@ const GameBoard = () => {
     ships.push(Ship(length));
   };
 
+  addShip(1);
+
   return {
     ships,
-    addShip,
+    gameField,
   };
 };
 

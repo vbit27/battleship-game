@@ -1,4 +1,4 @@
-const Ship = (length) => {
+const Ship = (name, length) => {
   const ship = Array.from('O'.repeat(length)); // O = not hit
 
   const hit = (position) => {
@@ -11,6 +11,7 @@ const Ship = (length) => {
     } else return true;
   };
   return {
+    name,
     hit,
     isSunk,
     ship,
