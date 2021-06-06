@@ -1,10 +1,7 @@
 import Ship from './Ship';
 
 const GameBoard = () => {
-  let gameField = {
-    a: ['', ''],
-    b: ['', ''],
-  };
+  let gameField = ['', ''];
 
   let ships = [];
 
@@ -14,7 +11,7 @@ const GameBoard = () => {
   };
 
   const addShiptToGameField = (ships) => {
-    gameField.a[0] = { name: ships[0].name, position: 0, hit: 'no' };
+    gameField[0] = { name: ships[0].name, position: 0, hit: 'no' };
   };
 
   addShiptoArray('ship-1', 1);
