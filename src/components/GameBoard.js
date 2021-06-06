@@ -1,7 +1,18 @@
 import Ship from './Ship';
 
 const GameBoard = () => {
-  let gameField = ['', ''];
+  // prettier-ignore
+  let gameField = 
+  ['', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', '',
+  '', '', '', '', '', '', '', '', '', ''];
 
   let ships = [];
 
@@ -11,13 +22,15 @@ const GameBoard = () => {
   };
 
   const addShiptToGameField = (ships) => {
-    gameField[0] = { name: ships[0].name, position: 0, hit: 'no' };
+    let index = Math.floor(Math.random() * 100 + 1);
+    gameField[index] = { name: ships[0].name, position: 0, hit: 'no' };
   };
 
   addShiptoArray('ship-1', 1);
 
   return {
     gameField,
+    ships,
   };
 };
 
